@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テストECサイト - 注文確認</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>注文確認</h1>
+        <nav>
+            <a href="index.html">商品一覧</a>
+            <a href="cart.html">カートを見る</a>
+        </nav>
+    </header>
+
+    <h2>カート内容</h2>
+    <table id="checkoutCartTable">
+        <thead>
+            <tr>
+                <th>商品名</th>
+                <th>価格</th>
+                <th>数量</th>
+                <th>合計</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JavaScriptでカート内容を表示 -->
+        </tbody>
+    </table>
+
+    <h3>合計金額: ¥<span id="checkoutTotalPrice">0</span></h3>
+
+    <h2>支払い情報</h2>
+    <form id="paymentForm">
+        <label for="name">名前:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">住所:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="creditCard">クレジットカード番号:</label>
+        <input type="text" id="creditCard" name="creditCard" required>
+
+        <button type="submit">注文を確定する</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

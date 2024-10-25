@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テストECサイト - ログイン</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>ログイン</h2>
+        <form id="loginForm">
+            <label for="username">ユーザー名</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">パスワード</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">ログイン</button>
+        </form>
+    </div>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        if (username === 'testuser' && password === 'password123') {
+            alert('ログイン成功');
+            window.location.href = 'index.html';
+        } else {
+            alert('ユーザー名またはパスワードが間違っています。');
+        }
+    });
+    </script>
+</body>
+</html>

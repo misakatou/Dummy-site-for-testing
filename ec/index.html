@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テストECサイト - 商品一覧</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>テストECサイト</h1>
+        <nav>
+            <a href="cart.html">カートを見る</a>
+            <a href="login.html">ログイン</a>
+        </nav>
+    </header>
+    
+    <h2>商品一覧</h2>
+    <div class="product-list">
+        <div class="product">
+            <img src="product1.jpg" alt="商品1">
+            <h3>商品1</h3>
+            <p>価格: ¥1000</p>
+            <a href="product1.html">詳細を見る</a>
+            <button onclick="addToCart('商品1', 1000)">カートに追加</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="商品2">
+            <h3>商品2</h3>
+            <p>価格: ¥2000</p>
+            <a href="product2.html">詳細を見る</a>
+            <button onclick="addToCart('商品2', 2000)">カートに追加</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

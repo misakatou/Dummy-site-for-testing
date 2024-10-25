@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テストECサイト - カート</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>カート</h1>
+        <nav>
+            <a href="index.html">商品一覧</a>
+            <a href="login.html">ログイン</a>
+        </nav>
+    </header>
+    
+    <h2>カートの中身</h2>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>商品名</th>
+                <th>価格</th>
+                <th>数量</th>
+                <th>合計</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JavaScriptでカートの商品を追加 -->
+        </tbody>
+    </table>
+    
+    <div id="totalArea">
+    <h3>合計金額: ¥<span id="totalPrice">0</span></h3>
+    <button id="checkoutButton">購入手続きに進む</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

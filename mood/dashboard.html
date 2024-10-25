@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日の気分入力画面</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="dashboard.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <a href="index.html">ログアウト</a>
+        <h1>今日の気分</h1>
+        
+        <p><strong>ユーザー名:</strong> <span id="username">asdfghjk</span></p>
+        <p><strong>今日の日付:</strong> <span id="currentDate"></span></p>
+
+        <h2>今日の気分</h2>
+        <form id="moodForm">
+            <label>
+                <input type="radio" name="mood" value="良い😀" required> 良い😀
+            </label>
+            <label>
+                <input type="radio" name="mood" value="普通🙂"> 普通🙂
+            </label>
+            <label>
+                <input type="radio" name="mood" value="悪い🤮"> 悪い🤮
+            </label>
+            <button type="submit">気分を記録</button>
+        </form>
+
+        <h2>過去の気分の一覧</h2>
+        <table id="moodTable">
+            <thead>
+                <tr>
+                    <th>日付</th>
+                    <th>気分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 過去の気分をここに追加 -->
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
