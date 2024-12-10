@@ -11,7 +11,7 @@ function addToCart(productName, price) {
     }
     
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(productName + " をカートに追加しました。");
+    // alert(productName + " をカートに追加しました。");
     updateTopPageTotal(); // 合計金額を更新
 }
 
