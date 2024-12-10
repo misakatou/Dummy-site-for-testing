@@ -12,6 +12,7 @@ function addToCart(productName, price) {
     
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(productName + " をカートに追加しました。");
+    updateTopPageTotal(); // 合計金額を更新
 }
 
 // カートページを表示する関数
@@ -43,6 +44,7 @@ function displayCart() {
             cart.splice(index, 1); // カートから商品を削除
             localStorage.setItem('cart', JSON.stringify(cart));
             displayCart(); // カートを再表示
+            updateTopPageTotal(); // 合計金額を更新
         };
         actionCell.appendChild(removeButton);
 
@@ -50,6 +52,16 @@ function displayCart() {
     });
     
     document.getElementById('totalPrice').textContent = totalPrice;
+}
+
+// トップページの合計金額を更新する関数
+function updateTopPageTotal() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    let priceElement = document.getElementById('price');
+    if (priceElement) {
+        priceElement.textContent = "合計金額: ¥" + totalPrice;
+    }
 }
 
 // ページが読み込まれたときにカートを表示する
@@ -111,3 +123,6 @@ if (document.getElementById('paymentForm')) {
         }
     });
 }
+
+// トップページの合計金額を表示
+document.addEventListener('DOMContentLoaded', updateTopPageTotal);
