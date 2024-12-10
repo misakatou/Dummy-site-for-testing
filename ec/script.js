@@ -60,7 +60,7 @@ function updateTopPageTotal() {
     let totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
     let priceElement = document.getElementById('price');
     if (priceElement) {
-        priceElement.textContent = "合計金額: ¥" + totalPrice;
+        priceElement.textContent = totalPrice;
     }
 }
 
